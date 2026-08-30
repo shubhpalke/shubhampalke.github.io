@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shubham Palke | QA Automation Engineer | SDET</title>
+
+    <meta name="description"
+          content="Shubham Palke - QA Automation Engineer and SDET specializing in Java, Selenium, Playwright, TestNG and API Testing.">
+
+    <meta name="keywords"
+          content="Shubham Palke, SDET, QA Automation Engineer, Java, Selenium, Playwright, TestNG, API Testing, REST Assured">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1e293b;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-small {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h2 {
+            font-size: 30px;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            max-width: 750px;
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .tech-line {
+            color: #38bdf8;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #38bdf8;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: #38bdf8;
+        }
+
+        .btn-secondary {
+            color: #38bdf8;
+        }
+
+        .btn-secondary:hover {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about {
+            background: #0f172a;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #cbd5e1;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: #111827;
+            padding: 30px;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .skill-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        #experience {
+            background: #0f172a;
+        }
+
+        .experience-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .experience-item {
+            border-left: 3px solid #38bdf8;
+            padding-left: 30px;
+            margin-bottom: 45px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: #38bdf8;
+            border-radius: 50%;
+        }
+
+        .experience-item h3 {
+            font-size: 23px;
+        }
+
+        .company {
+            color: #38bdf8;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .duration {
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .experience-item p {
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           RESUME
+        ========================= */
+
+        #resume {
+            background: #0f172a;
+            text-align: center;
+        }
+
+        .resume-content {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .resume-content p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-container {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-container p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            padding: 12px 20px;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #38bdf8;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 50px;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-content h2 {
+                font-size: 23px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="container nav-container">
+
+        <div class="logo">
+            SP
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#experience">Experience</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#resume">Resume</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                Hello, I'm
+            </div>
+
+            <h1>
+                Shubham Palke
+            </h1>
+
+            <h2>
+                QA Automation Engineer | SDET
+            </h2>
+
+            <p>
+                QA Automation Engineer with 3+ years of experience
+                in software testing and test automation. I specialize
+                in designing reliable automation solutions for web
+                applications and APIs.
+            </p>
+
+            <div class="tech-line">
+                Java · Selenium · Playwright · TestNG · API Testing
+            </div>
+
+            <div class="buttons">
+
+                <!-- CHANGE THIS TO YOUR ACTUAL RESUME FILE -->
+                <a href="resume.pdf"
+                   class="btn btn-primary"
+                   target="_blank">
+                    Download Resume
+                </a>
+
+                <a href="#projects"
+                   class="btn btn-secondary">
+                    View Projects
+                </a>
+
+                <!-- CHANGE GITHUB USERNAME -->
+                <a href="https://github.com/shubhampalke"
+                   class="btn btn-secondary"
+                   target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-content">
+
+            <p>
+                I am a QA Automation Engineer / SDET with 3+ years
+                of experience in software quality assurance and
+                test automation.
+            </p>
+
+            <p>
+                My experience includes developing and maintaining
+                automated test scripts using Java, Selenium WebDriver,
+                Playwright and TestNG, along with API testing and
+                automation framework development.
+            </p>
+
+            <p>
+                I enjoy building reusable automation components,
+                improving test coverage, identifying defects and
+                collaborating with development teams to deliver
+                reliable software.
+            </p>
+
+            <p>
+                I am currently focused on growing as an advanced
+                SDET and working on scalable UI and API automation
+                frameworks.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>Programming</h3>
+
+                <p>
+                    Java<br>
+                    JavaScript<br>
+                    TypeScript
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>UI Automation</h3>
+
+                <p>
+                    Selenium WebDriver<br>
+                    Playwright<br>
+                    Cross Browser Testing
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>API Testing</h3>
+
+                <p>
+                    REST API Testing<br>
+                    REST Assured<br>
+                    Postman
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Testing</h3>
+
+                <p>
+                    Functional Testing<br>
+                    Regression Testing<br>
+                    Smoke Testing<br>
+                    Sanity Testing
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Framework</h3>
+
+                <p>
+                    TestNG<br>
+                    Page Object Model<br>
+                    Data Driven Testing<br>
+                    Hybrid Framework
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>Tools</h3>
+
+                <p>
+                    Maven<br>
+                    Git<br>
+                    GitHub<br>
+                    Jenkins<br>
+                    CI/CD
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Work <span>Experience</span>
+        </h2>
+
+
+        <div class="experience-container">
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Software Engineer in Test
+                </h3>
+
+                <div class="company">
+                    Height8 Technologies Pvt. Ltd.
+                </div>
+
+                <div class="duration">
+                    May 2025 – Present | Ahmedabad, Gujarat
+                </div>
+
+                <p>
+                    Designing, developing and maintaining automated
+                    test scripts using Java and Selenium WebDriver.
+                    Working on automation frameworks, regression
+                    testing, functional testing and end-to-end
+                    application validation.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Software Quality Assurance Intern
+                </h3>
+
+                <div class="company">
+                    AI Variant
+                </div>
+
+                <div class="duration">
+                    Jan 2025 – Apr 2025 | Bengaluru
+                </div>
+
+                <p>
+                    Worked on software quality assurance activities,
+                    test case execution, defect identification and
+                    application validation.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Software Quality Assurance Test Engineer
+                </h3>
+
+                <div class="company">
+                    SpidronTech LLP
+                </div>
+
+                <div class="duration">
+                    Jan 2023 – Feb 2024 | Pune
+                </div>
+
+                <p>
+                    Designed and executed functional and regression
+                    test cases, developed end-to-end Selenium
+                    automation using Java and collaborated with
+                    developers for defect resolution.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <h3>
+                    Selenium Java Automation Framework
+                </h3>
+
+                <p>
+                    Scalable web automation framework built using
+                    Java, Selenium WebDriver, TestNG, Maven and
+                    Page Object Model.
+                </p>
+
+                <div class="project-tech">
+                    Java · Selenium · TestNG · Maven · POM
+                </div>
+
+                <!-- CHANGE THIS URL -->
+                <a href="https://github.com/shubhampalke"
+                   class="btn btn-secondary"
+                   target="_blank">
+                    View GitHub
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <h3>
+                    REST API Automation Framework
+                </h3>
+
+                <p>
+                    API automation framework for validating REST
+                    APIs, response status codes, response data,
+                    JSON payloads and business validations.
+                </p>
+
+                <div class="project-tech">
+                    Java · REST Assured · TestNG · Maven · JSON
+                </div>
+
+                <!-- CHANGE THIS URL -->
+                <a href="https://github.com/shubhampalke"
+                   class="btn btn-secondary"
+                   target="_blank">
+                    View GitHub
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <h3>
+                    Playwright Automation Framework
+                </h3>
+
+                <p>
+                    Modern browser automation framework using
+                    Playwright with reusable page objects,
+                    assertions and automated test execution.
+                </p>
+
+                <div class="project-tech">
+                    Playwright · JavaScript · TypeScript
+                </div>
+
+                <!-- CHANGE THIS URL -->
+                <a href="https://github.com/shubhampalke"
+                   class="btn btn-secondary"
+                   target="_blank">
+                    View GitHub
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESUME
+========================= -->
+
+<section id="resume">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My <span>Resume</span>
+        </h2>
+
+        <div class="resume-content">
+
+            <p>
+                Interested in my professional experience,
+                technical skills and QA automation background?
+                Download my latest resume.
+            </p>
+
+            <!-- CHANGE resume.pdf TO YOUR FILE NAME -->
+
+            <a href="resume.pdf"
+               class="btn btn-primary"
+               target="_blank">
+                Download Resume
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Get In <span>Touch</span>
+        </h2>
+
+        <div class="contact-container">
+
+            <p>
+                I'm open to opportunities in QA Automation,
+                SDET and Software Test Engineering.
+            </p>
+
+            <div class="contact-links">
+
+                <!-- CHANGE EMAIL -->
+
+                <a href="mailto:your-email@example.com"
+                   class="contact-link">
+                    Email
+                </a>
+
+
+                <!-- CHANGE LINKEDIN -->
+
+                <a href="https://www.linkedin.com/"
+                   class="contact-link"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+
+                <!-- CHANGE GITHUB -->
+
+                <a href="https://github.com/shubhampalke"
+                   class="contact-link"
+                   target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Shubham Palke · QA Automation Engineer / SDET
+    </p>
+
+</footer>
+
+
+</body>
+</html>
